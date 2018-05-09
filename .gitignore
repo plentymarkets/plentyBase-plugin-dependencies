@@ -91,3 +91,15 @@ gradle-app.setting
 /logs/
 .DS_Store
 libs/ext
+.idea/.name
+.idea/artifacts/
+.idea/compiler.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/modules/
+gradle/
+gradlew
+gradlew.bat
+src/main/resources/
+src/test/
