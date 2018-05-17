@@ -1,5 +1,7 @@
 package interfaces;
 
+import event.EventBean;
+
 import java.util.EventListener;
 
 /**
@@ -7,5 +9,5 @@ import java.util.EventListener;
  */
 public interface BaseEventListener extends EventListener
 {
-	void fireEvent(Object arg);
+	void fireEvent(EventBean eventBean);
 }
