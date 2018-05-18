@@ -12,5 +12,8 @@ public interface BasePlugin
 
 	Map<String, BaseEventListener> getEventListeners();
 
+	// servlet methods
+
+	// get requests are calling this method
 	String doGet();
 }
