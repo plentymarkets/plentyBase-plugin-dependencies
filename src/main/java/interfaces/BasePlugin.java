@@ -11,4 +11,6 @@ public interface BasePlugin
 	void startupPlugin();
 
 	Map<String, BaseEventListener> getEventListeners();
+
+	String doGet();
 }
