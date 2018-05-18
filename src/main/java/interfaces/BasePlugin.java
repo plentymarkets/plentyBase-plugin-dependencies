@@ -7,9 +7,8 @@ import java.util.Map;
  */
 public interface BasePlugin
 {
-	String getPluginIdentifier();
 
 	void startupPlugin();
-	
+
 	Map<String, BaseEventListener> getEventListeners();
 }
