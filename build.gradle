@@ -14,6 +14,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.glassfish.jersey.bundles/jaxrs-ri
     compile group: 'org.glassfish.jersey.bundles', name: 'jaxrs-ri', version: '2.26'
+
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
 }
 
 //create a single Jar with all dependencies

@@ -1,5 +1,7 @@
 package interfaces;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
@@ -15,5 +17,5 @@ public interface BasePlugin
 	// servlet methods
 
 	// get requests are calling this method
-	String doGet();
+	String doGet(String route, HttpServletRequest request, HttpServletResponse response);
 }
