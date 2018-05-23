@@ -1,8 +1,6 @@
 package interfaces;
 
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
@@ -11,14 +9,12 @@ import java.util.Map;
 public interface BasePlugin
 {
 
+	// define everything which should happen at plugin startup here
 	void startupPlugin();
 
+	// define all event listeners that should be registered here
 	Map<String, BaseEventListener> getEventListeners();
 
-	// servlet methods
-
-	// get requests are calling this method
-	String doGet(String route, HttpServletRequest request, HttpServletResponse response);
-
+	// define all servlets that should be registered here
 	Map<String, HttpServlet> getServlets();
 }
