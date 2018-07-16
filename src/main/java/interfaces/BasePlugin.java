@@ -23,9 +23,5 @@ public abstract class BasePlugin
 	{
 		return null;
 	}
-
-	public void finish()
-	{
-		System.exit(0);
-	}
+	
 }
