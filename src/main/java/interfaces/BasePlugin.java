@@ -6,15 +6,26 @@ import java.util.Map;
 /**
  * @author deubel
  */
-public interface BasePlugin
+public abstract class BasePlugin
 {
 
 	// define everything which should happen at plugin startup here
-	void startupPlugin();
+	public abstract void startupPlugin();
 
 	// define all event listeners that should be registered here
-	Map<String, BaseEventListener> getEventListeners();
+	public Map<String, BaseEventListener> getEventListeners()
+	{
+		return null;
+	}
 
 	// define all servlets that should be registered here
-	Map<String, HttpServlet> getServlets();
+	public Map<String, HttpServlet> getServlets()
+	{
+		return null;
+	}
+
+	public void finish()
+	{
+		System.exit(0);
+	}
 }
