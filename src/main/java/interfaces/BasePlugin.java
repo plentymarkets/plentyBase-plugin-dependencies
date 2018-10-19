@@ -8,7 +8,6 @@ import java.util.Map;
  */
 public abstract class BasePlugin
 {
-
 	// define everything which should happen at plugin startup here
 	public abstract void startupPlugin();
 
@@ -23,5 +22,5 @@ public abstract class BasePlugin
 	{
 		return null;
 	}
-	
+
 }
