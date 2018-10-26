@@ -13,6 +13,7 @@ import java.util.Map;
 
 public class PluginConfigService
 {
+	// gets a plugin config from the plugin config file
 	public static PluginConfig getPluginConfig(String pluginId)
 	{
 		String pluginConfigFilePath = PluginPathService.getPluginConfigFilePath(pluginId);
@@ -21,12 +22,14 @@ public class PluginConfigService
 		return pluginConfig;
 	}
 
+	// gets a property value from a plugin config
 	public static String getPluginConfigProperty(PluginConfig pluginConfig, String propertyName)
 	{
 		String propertyValue = PluginConfigHelper.getPluginConfigProperty(pluginConfig, propertyName);
 		return propertyValue;
 	}
 
+	// gets a property value from the plugin config file
 	public static String getPluginConfigProperty(String pluginId, String propertyName)
 	{
 		PluginConfig pluginConfig = getPluginConfig(pluginId);
@@ -34,6 +37,7 @@ public class PluginConfigService
 		return propertyValue;
 	}
 
+	// stores plugin config to plugin config file
 	public static boolean storePluginConfig(String pluginId, String pluginConfig)
 	{
 		String pluginConfigFilePath = PluginPathService.getPluginConfigFilePath(pluginId);
@@ -41,12 +45,14 @@ public class PluginConfigService
 		return successfullyStoredPluginConfig;
 	}
 
+	// stores a plugin config to plugin config file
 	public static boolean storePluginConfig(String pluginId, PluginConfig pluginConfig)
 	{
 		String pluginConfigJson = JsonHelper.getObjectAsJson(pluginConfig);
 		return storePluginConfig(pluginId, pluginConfigJson);
 	}
 
+	// sets plugin config property in plugin config file, if no plugin config file exists one will be created
 	public static boolean setPluginConfigProperty(String pluginId, String propertyName, String propertyValue)
 	{
 		if(propertyName == null){
