@@ -1,7 +1,5 @@
 package helper;
 
-import com.oracle.tools.packager.Log;
-
 import java.io.File;
 
 /**
@@ -17,18 +15,18 @@ public class DirectoryHelper
 		{
 			if (logFile.mkdirs())
 			{
-				Log.info("Created directory: " + logFile.getAbsolutePath());
+				System.out.println("Created directory: " + logFile.getAbsolutePath());
 			}
 			else
 			{
-				Log.debug("Can't create directory: " + directory);
+				System.out.println("Can't create directory: " + directory);
 			}
 		}
 		else
 		{
 			if (!logFile.canWrite())
 			{
-				Log.debug("Target directory is not writable: " + directory);
+				System.out.println("Target directory is not writable: " + directory);
 			}
 		}
 	}
