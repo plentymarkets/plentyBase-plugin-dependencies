@@ -25,6 +25,9 @@ dependencies {
     
     // https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
     compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.11'
+    
+    // https://mvnrepository.com/artifact/com.sun.xml.security/xml-security-impl
+    compile group: 'com.sun.xml.security', name: 'xml-security-impl', version: '1.0'
 }
 
 //create a single Jar with all dependencies
