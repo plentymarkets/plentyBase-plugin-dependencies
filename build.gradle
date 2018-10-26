@@ -28,6 +28,9 @@ dependencies {
     
     // https://mvnrepository.com/artifact/com.sun.xml.security/xml-security-impl
     compile group: 'com.sun.xml.security', name: 'xml-security-impl', version: '1.0'
+    
+    // https://mvnrepository.com/artifact/com.oracle.tools/oracle-tools-all
+    compile group: 'com.oracle.tools', name: 'oracle-tools-all', version: '1.2.2'
 }
 
 //create a single Jar with all dependencies
