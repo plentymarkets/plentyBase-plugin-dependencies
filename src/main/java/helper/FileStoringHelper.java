@@ -17,15 +17,14 @@ public class FileStoringHelper
 		{
 			return false;
 		}
-
 		byte[] contentAsBytes = Base64Helper.getByteArrayFromBase64String(content);
 		return storeByteArrayToFile(fileDirectory, fileName, fileExtension, contentAsBytes);
 	}
 
-	public static boolean storeStringToFile(String fileDirectory, String fileName, String fileExtension, String fileContent)
+	public static boolean storeStringToFile(String fileDirectory, String fileName, String fileExtention, String fileContent)
 	{
 		byte[] contentAsBytes = fileContent.getBytes();
-		return storeByteArrayToFile(fileDirectory, fileName, fileExtension, contentAsBytes);
+		return storeByteArrayToFile(fileDirectory, fileName, fileExtention, contentAsBytes);
 	}
 
 	public static boolean storeInputStreamToFile(String fileDirectory,
@@ -37,6 +36,14 @@ public class FileStoringHelper
 		return storeByteArrayToFile(fileDirectory, fileName, fileExtension, contentAsBytes);
 	}
 
+	public static boolean storeStringToFile(String filePath, String fileContent)
+	{
+		String fileDirectory = FilePathHelper.getFileDirectoryFromFilePath(filePath);
+		String fileName = FilePathHelper.getFileNameFromFilePath(filePath);
+		String fileExtention = FilePathHelper.getFileExtentionFromFilePath(filePath);
+		return storeStringToFile(fileDirectory, fileName, fileExtention, fileContent);
+	}
+
 	public static boolean storeByteArrayToFile(String fileDirectory, String fileName, String fileExtension, byte[] contentAsBytes)
 	{
 		//add file separator if it is missing
@@ -44,25 +51,9 @@ public class FileStoringHelper
 		{
 			fileDirectory += File.separator;
 		}
-
 		DirectoryHelper.createDirectoryIfNotExists(fileDirectory);
 		String filePath = FilePathHelper.getFilePath(fileDirectory, fileName, fileExtension);
 		return storeByteArrayToFile(filePath, contentAsBytes);
-	}
-
-	private static boolean storeByteArrayToFile(String filePath, byte[] contentAsBytes)
-	{
-		Path path = Paths.get(filePath);
-
-		try
-		{
-			Files.write(path, contentAsBytes);
-			return true;
-		}
-		catch (Exception e)
-		{
-			return false;
-		}
 	}
 
 	public static boolean deleteFile(String fileDirectory, String fileName, String fileExtension)
@@ -84,9 +75,17 @@ public class FileStoringHelper
 		}
 	}
 
-	public static boolean storeStringToFile(String filePath, String fileContent)
+	private static boolean storeByteArrayToFile(String filePath, byte[] contentAsBytes)
 	{
-		byte[] contentAsBytes = fileContent.getBytes();
-		return storeByteArrayToFile(filePath, contentAsBytes);
+		Path path = Paths.get(filePath);
+		try
+		{
+			Files.write(path, contentAsBytes);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
 	}
 }
