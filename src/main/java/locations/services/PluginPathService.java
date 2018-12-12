@@ -7,30 +7,30 @@ import java.io.File;
 public class PluginPathService
 {
 	private static final String CONFIG_FILE_NAME = "config.json";
-	private static final String PLUGIN_FOLDER_PATH = "Plugin Data";
+	private static final String PLUGIN_DATA_FOLDER_PATH = "Plugins" + File.separator + "data";
 
 	/**
-	 * Get path of plentyBase application folder
+	 * Get path of plugin config file
 	 *
 	 * @return String
 	 */
 	public static String getPluginConfigFilePath(String pluginId)
 	{
-		String applicationFolderPath = getPluginFolderPath(pluginId);
+		String applicationFolderPath = getPluginDataFolderPath(pluginId);
 		String pluginConfigFilePath = applicationFolderPath + File.separator + CONFIG_FILE_NAME;
 		return pluginConfigFilePath;
 	}
 
 	/**
-	 * Get path of plentyBase application folder
+	 * Get path of plugin data folder
 	 *
 	 * @return String
 	 */
-	public static String getPluginFolderPath(String pluginId)
+	public static String getPluginDataFolderPath(String pluginId)
 	{
 		String applicationFolderPath = getPlentyBaseApplicationFolderPath();
-		String pluginFolderPath = applicationFolderPath + File.separator + PLUGIN_FOLDER_PATH + File.separator + pluginId;
-		return pluginFolderPath;
+		String pluginDataFolderPath = applicationFolderPath + File.separator + PLUGIN_DATA_FOLDER_PATH + File.separator + pluginId;
+		return pluginDataFolderPath;
 	}
 
 	/**
