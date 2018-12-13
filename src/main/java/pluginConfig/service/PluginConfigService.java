@@ -37,6 +37,16 @@ public class PluginConfigService
 		return propertyValue;
 	}
 
+	// gets a property value from a plugin config
+	public static String getPluginConfigProperty(String pluginId, String propertyName, String fallbackValue)
+	{
+		String propertyValue = getPluginConfigProperty(pluginId, propertyName);
+		if(propertyValue == null){
+			return fallbackValue;
+		}
+		return propertyValue;
+	}
+
 	// stores plugin config to plugin config file
 	public static boolean storePluginConfig(String pluginId, String pluginConfig)
 	{
