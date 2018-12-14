@@ -1,5 +1,7 @@
 package interfaces;
 
+import pluginConfig.data.PluginConfig;
+
 import javax.servlet.http.HttpServlet;
 import java.util.Map;
 
@@ -23,4 +25,9 @@ public abstract class BasePlugin
 		return null;
 	}
 
+	// define all servlets that should be registered here
+	public PluginConfig getDefaultPluginConfig()
+	{
+		return null;
+	}
 }
