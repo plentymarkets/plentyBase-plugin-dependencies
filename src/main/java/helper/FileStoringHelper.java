@@ -73,9 +73,8 @@ public class FileStoringHelper
 			if (path.toFile().exists())
 			{
 				Files.delete(path);
-				return true;
 			}
-			return false;
+			return true;
 		}
 		catch (Exception e)
 		{
