@@ -56,6 +56,14 @@ public class FileStoringHelper
 		return storeByteArrayToFile(filePath, contentAsBytes);
 	}
 
+	public static boolean deleteFile(String filePath)
+	{
+		String fileDirectory = FilePathHelper.getFileDirectoryFromFilePath(filePath);
+		String fileName = FilePathHelper.getFileNameFromFilePath(filePath);
+		String fileExtention = FilePathHelper.getFileExtentionFromFilePath(filePath);
+		return deleteFile(fileDirectory, fileName, fileExtention);
+	}
+
 	public static boolean deleteFile(String fileDirectory, String fileName, String fileExtension)
 	{
 		String filePath = FilePathHelper.getFilePath(fileDirectory, fileName, fileExtension);
@@ -65,9 +73,9 @@ public class FileStoringHelper
 			if (path.toFile().exists())
 			{
 				Files.delete(path);
+				return true;
 			}
-
-			return true;
+			return false;
 		}
 		catch (Exception e)
 		{

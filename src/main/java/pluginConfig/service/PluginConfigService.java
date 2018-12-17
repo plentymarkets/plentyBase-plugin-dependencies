@@ -78,4 +78,12 @@ public class PluginConfigService
 		storePluginConfig(pluginId, pluginConfig);
 		return true;
 	}
+
+	// deletes a plugin config
+	public static boolean deletePluginConfig(String pluginId)
+	{
+		String pluginConfigFilePath = PluginPathService.getPluginConfigFilePath(pluginId);
+		boolean successfullyDeletedFile = FileStoringHelper.deleteFile(pluginConfigFilePath);
+		return successfullyDeletedFile;
+	}
 }
