@@ -12,7 +12,7 @@ public class PluginConfig
 		this.properties = properties;
 		this.editable = editable;
 	}
-	
+
 	public Map<String, String> getProperties()
 	{
 		return properties;
