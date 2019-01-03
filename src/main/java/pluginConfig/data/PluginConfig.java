@@ -7,6 +7,11 @@ public class PluginConfig
 	Map<String,String> properties;
 	Boolean editable;
 
+	public PluginConfig(Map<String, String> properties)
+	{
+		this.properties = properties;
+	}
+
 	public PluginConfig(Map<String, String> properties, Boolean editable)
 	{
 		this.properties = properties;
