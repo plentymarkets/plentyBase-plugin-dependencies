@@ -9,6 +9,7 @@ import pluginConfig.helper.PluginConfigHelper;
 import pluginConfig.helper.PluginConfigJsonHelper;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PluginConfigService
@@ -70,7 +71,7 @@ public class PluginConfigService
 		}
 		PluginConfig pluginConfig = getPluginConfig(pluginId);
 		if(pluginConfig == null){
-			Map<String,String> emptyMap = new HashMap<>();
+			LinkedHashMap<String,String> emptyMap = new LinkedHashMap<>();
 			pluginConfig = new PluginConfig(emptyMap);
 		}
 		Map<String, String> propertyMap = pluginConfig.getProperties();

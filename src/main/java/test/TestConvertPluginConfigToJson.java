@@ -3,11 +3,12 @@ package test;
 import pluginConfig.data.PluginConfig;
 import pluginConfig.helper.PluginConfigJsonHelper;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class TestConvertPluginConfigToJson
 {
 	public static void main(String[] arguments){
-		HashMap<String, String> map = new HashMap<>();
+		LinkedHashMap<String, String> map = new LinkedHashMap<>();
 		map.put("test", "test1");
 		PluginConfig pluginConfig = new PluginConfig(map);
 		String pluginConfigAsJson = PluginConfigJsonHelper.getPluginConfigAsJson(pluginConfig);
