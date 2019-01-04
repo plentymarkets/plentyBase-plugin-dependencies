@@ -4,16 +4,13 @@ import helper.FileReadingHelper;
 import helper.FileStoringHelper;
 import helper.JsonHelper;
 import locations.services.PluginPathService;
-import org.apache.commons.lang3.tuple.Pair;
 import pluginConfig.data.PluginConfig;
 import pluginConfig.data.Property;
 import pluginConfig.helper.PluginConfigHelper;
 import pluginConfig.helper.PluginConfigJsonHelper;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class PluginConfigService
 {
