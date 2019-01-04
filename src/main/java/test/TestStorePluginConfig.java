@@ -5,13 +5,12 @@ import pluginConfig.data.PluginConfig;
 import pluginConfig.service.PluginConfigService;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class TestStorePluginConfig
 {
 	public static void main(String[] arguments){
-		LinkedHashMap<String, String> map = new LinkedHashMap<>();
+		Map<String, String> map = new HashMap<>();
 		map.put("test2","test2");
 		PluginConfig pluginConfigForStoring = new PluginConfig(map);
 

@@ -1,22 +1,22 @@
 package pluginConfig.data;
 
-import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class PluginConfig
 {
-	LinkedHashMap<String,String> properties;
+	Map<String,String> properties;
 
-	public PluginConfig(LinkedHashMap<String, String> properties)
+	public PluginConfig(Map<String, String> properties)
 	{
 		this.properties = properties;
 	}
 
-	public LinkedHashMap<String, String> getProperties()
+	public Map<String, String> getProperties()
 	{
 		return properties;
 	}
 
-	public void setProperties(LinkedHashMap<String, String> properties)
+	public void setProperties(Map<String, String> properties)
 	{
 		this.properties = properties;
 	}
