@@ -1,22 +1,22 @@
 package pluginConfig.data;
 
-import java.util.Map;
+import java.util.List;
 
 public class PluginConfig
 {
-	Map<String,String> properties;
+	List<Property> properties;
 
-	public PluginConfig(Map<String, String> properties)
+	public PluginConfig(List<Property> properties)
 	{
 		this.properties = properties;
 	}
 
-	public Map<String, String> getProperties()
+	public List<Property> getProperties()
 	{
 		return properties;
 	}
 
-	public void setProperties(Map<String, String> properties)
+	public void setProperties(List<Property> properties)
 	{
 		this.properties = properties;
 	}

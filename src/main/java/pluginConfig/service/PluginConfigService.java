@@ -4,11 +4,15 @@ import helper.FileReadingHelper;
 import helper.FileStoringHelper;
 import helper.JsonHelper;
 import locations.services.PluginPathService;
+import org.apache.commons.lang3.tuple.Pair;
 import pluginConfig.data.PluginConfig;
+import pluginConfig.data.Property;
 import pluginConfig.helper.PluginConfigHelper;
 import pluginConfig.helper.PluginConfigJsonHelper;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PluginConfigService
@@ -70,11 +74,12 @@ public class PluginConfigService
 		}
 		PluginConfig pluginConfig = getPluginConfig(pluginId);
 		if(pluginConfig == null){
-			Map<String,String> emptyMap = new HashMap<>();
-			pluginConfig = new PluginConfig(emptyMap);
+			List<Property> emptyPropertyList = new ArrayList<>();
+			pluginConfig = new PluginConfig(emptyPropertyList);
 		}
-		Map<String, String> propertyMap = pluginConfig.getProperties();
-		propertyMap.put(propertyName, propertyValue);
+		List<Property> propertyMap = pluginConfig.getProperties();
+		Property property = new Property(propertyName, propertyValue);
+		propertyMap.add(property);
 		storePluginConfig(pluginId, pluginConfig);
 		return true;
 	}

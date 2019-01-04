@@ -2,17 +2,21 @@ package test;
 
 import helper.JsonHelper;
 import pluginConfig.data.PluginConfig;
+import pluginConfig.data.Property;
 import pluginConfig.service.PluginConfigService;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TestStorePluginConfig
 {
 	public static void main(String[] arguments){
-		Map<String, String> map = new HashMap<>();
-		map.put("test2","test2");
-		PluginConfig pluginConfigForStoring = new PluginConfig(map);
+		List<Property> properties = new ArrayList<>();
+		Property property = new Property("key2","value2");
+		properties.add(property);
+		PluginConfig pluginConfigForStoring = new PluginConfig(properties);
 
 		String pluginId = "plentyBaseOfflineArticleSearch";
 		PluginConfig storedPluginConfig = PluginConfigService.getPluginConfig(pluginId);

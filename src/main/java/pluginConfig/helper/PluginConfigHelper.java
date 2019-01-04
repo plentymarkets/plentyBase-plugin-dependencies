@@ -1,7 +1,9 @@
 package pluginConfig.helper;
 
 import pluginConfig.data.PluginConfig;
+import pluginConfig.data.Property;
 
+import java.util.List;
 import java.util.Map;
 
 public class PluginConfigHelper
@@ -14,8 +16,8 @@ public class PluginConfigHelper
 		if(propertyName == null){
 			return null;
 		}
-		Map<String,String> propertyMap = pluginConfig.getProperties();
-		String propertyValue = propertyMap.get(propertyName);
+		List<Property> properties = pluginConfig.getProperties();
+		String propertyValue = PropertyHelper.getPropertyValueForPropertyName(properties, propertyName);
 		return propertyValue;
 	}
 }
