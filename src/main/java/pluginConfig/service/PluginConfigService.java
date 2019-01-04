@@ -71,7 +71,7 @@ public class PluginConfigService
 		PluginConfig pluginConfig = getPluginConfig(pluginId);
 		if(pluginConfig == null){
 			Map<String,String> emptyMap = new HashMap<>();
-			pluginConfig = new PluginConfig(emptyMap, null);
+			pluginConfig = new PluginConfig(emptyMap);
 		}
 		Map<String, String> propertyMap = pluginConfig.getProperties();
 		propertyMap.put(propertyName, propertyValue);

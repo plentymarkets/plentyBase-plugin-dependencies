@@ -12,7 +12,7 @@ public class TestStorePluginConfig
 	public static void main(String[] arguments){
 		Map<String, String> map = new HashMap<>();
 		map.put("test2","test2");
-		PluginConfig pluginConfigForStoring = new PluginConfig(map, true);
+		PluginConfig pluginConfigForStoring = new PluginConfig(map);
 
 		String pluginId = "plentyBaseOfflineArticleSearch";
 		PluginConfig storedPluginConfig = PluginConfigService.getPluginConfig(pluginId);
