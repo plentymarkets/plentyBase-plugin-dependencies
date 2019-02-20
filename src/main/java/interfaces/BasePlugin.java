@@ -10,24 +10,29 @@ import java.util.Map;
  */
 public abstract class BasePlugin
 {
-	// define everything which should happen at plugin startup here
-	public abstract void startupPlugin();
 
-	// define all event listeners that should be registered here
-	public Map<String, BaseEventListener> getEventListeners()
-	{
-		return null;
-	}
+    public void injectApplicationContext(ApplicationContext context)
+    {
+    }
 
-	// define all servlets that should be registered here
-	public Map<String, HttpServlet> getServlets()
-	{
-		return null;
-	}
+    // define everything which should happen at plugin startup here
+    public abstract void startupPlugin();
 
-	// define all servlets that should be registered here
-	public PluginConfig getDefaultPluginConfig()
-	{
-		return null;
-	}
+    // define all event listeners that should be registered here
+    public Map<String, BaseEventListener> getEventListeners()
+    {
+        return null;
+    }
+
+    // define all servlets that should be registered here
+    public Map<String, HttpServlet> getServlets()
+    {
+        return null;
+    }
+
+    // define all servlets that should be registered here
+    public PluginConfig getDefaultPluginConfig()
+    {
+        return null;
+    }
 }
