@@ -1,9 +1,9 @@
-package pluginConfig.data;
+package config.data;
 
 public class Property
 {
-	String key;
-	String value;
+	private String key;
+	private String value;
 
 	public Property(String key, String value)
 	{

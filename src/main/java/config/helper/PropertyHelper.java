@@ -1,7 +1,7 @@
-package pluginConfig.helper;
+package config.helper;
 
 import helper.StringHelper;
-import pluginConfig.data.Property;
+import config.data.Property;
 
 import java.util.List;
 

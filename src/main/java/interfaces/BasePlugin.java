@@ -1,6 +1,6 @@
 package interfaces;
 
-import pluginConfig.data.PluginConfig;
+import config.data.PluginConfig;
 
 import javax.servlet.http.HttpServlet;
 import java.util.Map;

@@ -1,13 +1,13 @@
-package pluginConfig.service;
+package config.service;
 
 import helper.FileReadingHelper;
 import helper.FileStoringHelper;
 import helper.JsonHelper;
 import locations.services.PluginPathService;
-import pluginConfig.data.PluginConfig;
-import pluginConfig.data.Property;
-import pluginConfig.helper.PluginConfigHelper;
-import pluginConfig.helper.PluginConfigJsonHelper;
+import config.data.PluginConfig;
+import config.data.Property;
+import config.helper.PluginConfigHelper;
+import config.helper.PluginConfigJsonHelper;
 
 import java.util.ArrayList;
 import java.util.List;

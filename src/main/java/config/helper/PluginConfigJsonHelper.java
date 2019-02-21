@@ -1,8 +1,8 @@
-package pluginConfig.helper;
+package config.helper;
 
 import com.google.gson.Gson;
 import helper.JsonHelper;
-import pluginConfig.data.PluginConfig;
+import config.data.PluginConfig;
 
 public class PluginConfigJsonHelper
 {

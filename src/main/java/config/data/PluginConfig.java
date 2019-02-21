@@ -1,4 +1,4 @@
-package pluginConfig.data;
+package config.data;
 
 import java.util.List;
 
